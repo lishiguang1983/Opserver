@@ -34,14 +34,20 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Dapper" Version="1.50.4-alpha1-00070" />
-    <PackageReference Include="Jil" Version="2.15.4" />
+    <PackageReference Include="Dapper" Version="1.50.4" />
+    <PackageReference Include="Jil">
+      <Version>2.15.4</Version>
+    </PackageReference>
     <PackageReference Include="MiniProfiler" Version="4.0.0-alpha9-00207" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
     <PackageReference Include="StackExchange.Exceptional" Version="2.0.0-alpha3-00185" />
     <PackageReference Include="StackExchange.Redis" Version="1.2.6" />
     <PackageReference Include="UnconstrainedMelody" Version="0.2.1" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MiniProfiler.Shared, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b44f9351044011a3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Opserver\Bin\MiniProfiler.Shared.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
