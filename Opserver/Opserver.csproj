@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Target Name="GatherAllFilesToPublish">
+  </Target>
   <PropertyGroup>
     <LangVersion>7</LangVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -127,8 +129,11 @@
     <None Include="Config\ElasticSettings.example.json" />
     <None Include="Config\ExceptionsSettings.example.json" />
     <None Include="Config\HAProxySettings.example.json" />
+    <Content Include="Config\RedisSettings.json" />
     <None Include="Config\RedisSettings.example.json" />
     <Content Include="Config\SecuritySettings.config.example" />
+    <None Include="Config\SecuritySettings.config" />
+    <Content Include="Config\SQLSettings.json" />
     <None Include="Config\SQLSettings.example.json" />
     <Content Include="Content\img\logo\logo.eps" />
     <None Include="Config\JiraSettings.example.json" />
@@ -639,6 +644,7 @@
       <DependentUpon>Databases.Modal.cshtml</DependentUpon>
     </Content>
     <Content Include="Views\SQL\AllJobs.cshtml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\js\Scripts.js" />
